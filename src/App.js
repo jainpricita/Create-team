@@ -44,7 +44,7 @@ function App() {
       filteredData = filteredData.filter(user => user.domain === domainFilter);
     }
     if (selectedAvailability) {
-      filteredData = filteredData.filter(user => user.available.toString() == selectedAvailability);
+      filteredData = filteredData.filter(user => user.available.toString() === selectedAvailability);
     }
 
     return filteredData.slice(firstUserDisplayed,lastUserDisplayed);
