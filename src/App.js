@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import ReactPaginate from 'react-paginate';
 import "./App.scss"
 import Cards from "./components/Cards";
+import CreateTeam from './components/CreateTeam';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -66,7 +67,7 @@ function App() {
   const genders = [...new Set(users.map(user => user.gender))];
 
   return (
-    <div className="container">
+      <div className="container">
       <nav class="navbar navbar-light navbar-expand">
       <form class="form-inline">
           <input class="form-control mr-4" type="search" placeholder="Search" aria-label="Search" onChange={e => setQuery(e.target.value)} />
@@ -94,6 +95,7 @@ function App() {
           </select>
         </form>
 
+       <CreateTeam  dataList={users}/>
       </nav>
       <Cards userData={search(users)}></Cards>
       <ReactPaginate
@@ -112,6 +114,7 @@ function App() {
         pageLinkClassName='page-link'
       />
     </div>
+    
      );
 }
 

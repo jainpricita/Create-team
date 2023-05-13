@@ -1,12 +1,25 @@
 .container {
-    
+
   margin-top: 12px;
 }
 
-.flex{
+.modal-dialog {
+  height: 90%;
+  max-width: 80%;
+}
+
+.modal-content {
+  height: 100%;
+}
+
+.sideNav-modal {
+  background: rgb(80, 125, 250) !important;
+}
+.flex {
   display: flex;
   margin-left: 6px;
-  select{
+
+  select {
     margin-left: 3px;
   }
 }
@@ -15,14 +28,14 @@
   margin-bottom: 12px;
 
   h6 {
-      margin-bottom: 2px;
+    margin-bottom: 2px;
   }
 }
 
 .page-link {
-   border: none;
+  border: none;
 
   .active {
-      background-color: grey;
+    background-color: grey;
   }
 }
