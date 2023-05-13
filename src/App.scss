@@ -1,0 +1,28 @@
+.container {
+    
+  margin-top: 12px;
+}
+
+.flex{
+  display: flex;
+  margin-left: 6px;
+  select{
+    margin-left: 3px;
+  }
+}
+
+.card-text {
+  margin-bottom: 12px;
+
+  h6 {
+      margin-bottom: 2px;
+  }
+}
+
+.page-link {
+   border: none;
+
+  .active {
+      background-color: grey;
+  }
+}
