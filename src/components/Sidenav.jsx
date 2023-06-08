@@ -10,23 +10,18 @@ import SideNav, {
 export default function SideNavBar({ dataList }) {
   const [domainFilter, setDomainFilter] = useState("IT");
   const [showData, setShowData] = useState(false);
-  const [userSelected, setUserSelected] = useState("");
   const [selectedUserList, setSelectedUserList] = useState([]);
 
   let filteredData = dataList.filter(user => user.domain === domainFilter && user.available);
-
   function handleDomainChange(event) {
     setDomainFilter(event.target.innerText);
     setShowData(true);
   }
 
   function handleSelectedUser(event) {
-    setUserSelected(event.target.innerText);
-    // console.log(event);
-    // userPushed = filteredData.filter(user => user.id === userSelected);
-    console.log(userSelected)
-    setSelectedUserList([...selectedUserList, userSelected])
-    // arrayU.push(userSelected);
+    const user=event.target.innerText
+    const printUserList=[...selectedUserList, user];
+    setSelectedUserList(printUserList)
     setShowData(false);
   }
 
