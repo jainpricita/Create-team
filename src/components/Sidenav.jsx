@@ -57,7 +57,7 @@ export default function SideNavBar({ dataList }) {
   </thead>
           <tbody>
             {selectedUserList.map(user => (
-              <tr>8
+              <tr>
                 <td>{user}</td>
               </tr>
 
